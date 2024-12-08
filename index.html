@@ -1,0 +1,63 @@
+<!-- To-Do List Application**
+   - Features:
+     - Add, edit, and delete tasks.
+     - Mark tasks as completed.
+     - Save tasks to local storage so they persist after a page refresh.
+   - Skills: DOM manipulation, event handling, and local storage. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>TO-DO list</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                margin:20px;
+                background-color: rgb(6, 6, 72);
+                color:aliceblue;
+            }
+            .textArea{
+                 justify-content:center;
+                 align-items:center;
+                 color:yellow;
+            }
+            .task{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin : 10px 0;
+                padding: 10px;
+                border-style: double;
+                border: 1px solid #fdf9f9;
+                border-radius: 5px;
+            }
+            .completed{
+                text-decoration: line-through;
+                text-decoration-color: red;
+                color:rgb(255, 254, 254);
+            }
+            .buttons{
+                display:flex;
+                gap: 5px;
+            }
+            button{
+                padding: 5px 10px;
+                cursor: pointer;
+            }
+        </style>
+        <h1>
+           TO-DO LIST 
+        </h1>
+        <div class="textArea">
+            <input id="taskInput" type="text" placeholder="Add a new task">
+            <button onclick="addTask()"> ADD TASK</button>
+        </div>
+        <div id="taskList"></div>
+        <script src="fun.js"> </script>
+    </body>
+</html>
